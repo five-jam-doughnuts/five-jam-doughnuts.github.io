@@ -1,0 +1,27 @@
+.App {
+    text-align: center;
+}
+
+h1 {
+    color: #F2CD5D;
+}
+
+.word-list {
+    display: flex;
+    justify-content: center;
+}
+
+.word-card {
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+.word-card h3 {
+    margin: 0 0 8px 0;
+    color: #F2CD5D;
+}
+
+.word-card button {
+    margin: 4px;
+}
