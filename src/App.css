@@ -1,13 +1,26 @@
 .App {
     text-align: center;
+    width: 100vw;
+    height: 100vh;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
     color: #F2CD5D;
 }
 
+h2 {
+    color: #F2CD5D;
+}
+
 .word-list {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -17,11 +30,50 @@ h1 {
     border-radius: 8px;
 }
 
-.word-card h3 {
-    margin: 0 0 8px 0;
-    color: #F2CD5D;
+.word-card .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .word-card button {
+    flex: 1 1 calc(25% - 16px); /* Each button takes up 25% minus margin */
     margin: 4px;
+    padding: 16px;
+    height: 100px; /* Fixed height for buttons */
+    border: none;
+    border-radius: 8px;
+    -webkit-text-stroke: 1px #3A1772;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.epic {
+    background-color: gold;
+}
+
+button.good {
+    background-color: silver;
+}
+
+button.fail {
+    background-color: #CD7F32;
+}
+
+button.veto {
+    background-color: red;
+}
+
+button.veto:disabled {
+    opacity: 0.2;
+}
+
+@media (max-width: 600px) {
+    .word-card button {
+        flex: 1 1 calc(50% - 16px); /* Adjust for smaller screens */
+    }
 }

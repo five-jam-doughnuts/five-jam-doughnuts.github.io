@@ -8,14 +8,14 @@ interface WordCardProps {
 }
 
 const WordCard: React.FC<WordCardProps> = ({ word, userId, onNext }) => {
-    const [vetoed, setVetoed] = useState<boolean>(false);
+    const [hasVetoed, setVetoed] = useState<boolean>(false);
 
     const handleSort = async (category: string) => {
         await addDoc(collection(db, 'responses'), {
             word,
             userId,
             category,
-            vetoed
+            vetoed: false
         });
         onNext();
     };
@@ -33,11 +33,13 @@ const WordCard: React.FC<WordCardProps> = ({ word, userId, onNext }) => {
 
     return (
         <div className="word-card">
-            <h3>{word}</h3>
-            <button onClick={() => handleSort('epic')} disabled={vetoed}>Epic</button>
-            <button onClick={() => handleSort('good')} disabled={vetoed}>Good</button>
-            <button onClick={() => handleSort('fail')} disabled={vetoed}>Fail</button>
-            <button onClick={handleVeto} disabled={vetoed}>Veto</button>
+            <h2>{word}</h2>
+            <div className="button-container">
+                <button className="epic" onClick={() => handleSort('epic')}>Epic</button>
+                <button className="good" onClick={() => handleSort('good')}>Good</button>
+                <button className="fail" onClick={() => handleSort('fail')}>Fail</button>
+                <button className="veto" onClick={handleVeto} disabled={hasVetoed}>Veto</button>
+            </div>
         </div>
     );
 };

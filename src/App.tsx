@@ -44,7 +44,7 @@ const App: React.FC = () => {
 
     return (
         <div className="App">
-            <h1 className="word">C Words</h1>
+            <h1>C Words</h1>
             <WordList words={words} userId={userId} />
         </div>
     );

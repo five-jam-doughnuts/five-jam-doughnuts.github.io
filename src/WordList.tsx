@@ -20,6 +20,7 @@ const WordList: React.FC<WordListProps> = ({ words, userId }) => {
     return (
         <div className="word-list">
             <WordCard word={words[currentIndex]} userId={userId} onNext={handleNext} />
+            <h2>{currentIndex + 1} / {words.length}</h2>
         </div>
     );
 };
