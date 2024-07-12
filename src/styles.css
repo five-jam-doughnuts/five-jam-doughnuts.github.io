@@ -8,13 +8,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-h1 {
-    color: #F2CD5D;
-}
-
-h2 {
     color: #F2CD5D;
 }
 
@@ -70,7 +63,7 @@ button.veto {
     color: hsl(0, 100%, 12.5%);
 }
 
-button.veto:disabled {
+button:disabled {
     opacity: 0.2;
 }
 
@@ -78,4 +71,9 @@ button.veto:disabled {
     .word-card button {
         flex: 1 1 calc(50% - 16px); /* Adjust for smaller screens */
     }
+}
+
+ol {
+    overflow-y: scroll;
+    height: 80vh;
 }

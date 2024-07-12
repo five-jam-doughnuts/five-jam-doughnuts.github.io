@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { db, doc, getDoc, setDoc, auth, onAuthStateChanged, collection, getDocs } from './firebaseConfig';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { doc, getDoc, setDoc, collection, getDocs } from 'firebase/firestore';
+import { onAuthStateChanged } from 'firebase/auth';
+import { db, auth } from './firebaseConfig';
 import WordList from './WordList';
+import Results from './Results';
 import './styles.css'; // Import the CSS file
 
 const App: React.FC = () => {
@@ -38,10 +42,23 @@ const App: React.FC = () => {
     }
 
     return (
-        <div className="App">
-            <h1>C Words</h1>
-            <WordList userId={userId} />
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={
+                    <div className="App">
+                        <h1>C Words</h1>
+                        <WordList userId={userId} />
+                    </div>
+                } />
+                <Route path="/results" element={
+                    <div className="App">
+                        <h1>Results</h1>
+                        <Results />
+                    </div>
+                } />
+                <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
+        </Router>
     );
 };
 
