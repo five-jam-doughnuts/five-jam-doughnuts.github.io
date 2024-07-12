@@ -63,7 +63,7 @@ const WordList: React.FC<WordListProps> = ({ userId }) => {
     return (
         <div className="word-list">
             <WordCard word={userWords[0]} userId={userId} vetoUsed={vetoUsed} onNext={(currentWord, enableButtons) => handleNext(currentWord, enableButtons)} />
-            <h2>{currentIndex + 1} / {totalWords.length}</h2>
+            <h2>{currentIndex} / {totalWords.length}</h2>
         </div>
     );
 };
