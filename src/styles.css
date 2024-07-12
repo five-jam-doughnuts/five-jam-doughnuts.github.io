@@ -80,3 +80,7 @@ ol {
     margin: 0;
     padding: 0;
 }
+
+.vetoed {
+    color: #d9534f; /* A nice red color */
+}
