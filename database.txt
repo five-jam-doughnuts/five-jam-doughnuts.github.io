@@ -1,3 +1,5 @@
+// https://coolors.co/d741a7-3a1772-5398be-f2cd5d-dea54b
+
 if user not present then create user and populate words
 if user's words array is empty then they are finished
 

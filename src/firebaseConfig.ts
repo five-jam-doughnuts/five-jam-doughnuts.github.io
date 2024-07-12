@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, addDoc, doc, setDoc, getDoc } from 'firebase/firestore';
-import { getAuth, signInAnonymously } from 'firebase/auth';
+import { getFirestore, collection, addDoc, doc, setDoc, getDoc, updateDoc, getDocs, arrayRemove, increment } from 'firebase/firestore';
+import { getAuth, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCdY157KRt8yWGTxKK7hEo8gfthuEVoAC0",
@@ -26,4 +26,4 @@ const signIn = async () => {
 
 signIn();
 
-export { db, collection, addDoc, doc, setDoc, getDoc };
+export { db, collection, addDoc, doc, setDoc, getDoc, updateDoc, getDocs, auth, onAuthStateChanged, arrayRemove, increment };
