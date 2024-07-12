@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    width: 100svw;
+    width: 80svw;
     height: 100svh;
     max-width: 600px;
     margin: auto;
@@ -76,5 +76,5 @@ button:disabled {
 ol {
     overflow-y: scroll;
     height: 80svh;
-    width: 90svw;
+    width: 75svw;
 }
