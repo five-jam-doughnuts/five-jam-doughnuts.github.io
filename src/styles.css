@@ -2,7 +2,7 @@
     text-align: center;
     width: 80svw;
     height: 100svh;
-    max-width: 600px;
+    /* max-width: 600px; */
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -76,6 +76,7 @@ button:disabled {
 ol {
     overflow-y: scroll;
     height: 80svh;
-    width: 75svw;
     list-style-position: inside;
+    margin: 0;
+    padding: 0;
 }
