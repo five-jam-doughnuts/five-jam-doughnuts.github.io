@@ -77,4 +77,5 @@ ol {
     overflow-y: scroll;
     height: 80svh;
     width: 75svw;
+    list-style-position: inside;
 }
