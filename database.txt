@@ -1,0 +1,20 @@
+if user not present then create user and populate words
+if user's words array is empty then they are finished
+
+users
+    uid
+        array: ["car", "cat"]
+
+words
+    car
+    cat
+        epic
+        good
+        fail
+        veto
+        points
+
+epic points - 10
+good points - 5
+fail points - 0
+veto flag
