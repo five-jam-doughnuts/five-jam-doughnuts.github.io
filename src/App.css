@@ -43,8 +43,6 @@ h2 {
     height: 100px; /* Fixed height for buttons */
     border: none;
     border-radius: 8px;
-    -webkit-text-stroke: 1px #3A1772;
-    color: #fff;
     font-size: 2em;
     cursor: pointer;
     display: flex;
@@ -54,18 +52,22 @@ h2 {
 
 button.epic {
     background-color: gold;
+    color: rgb(64, 54, 0);
 }
 
 button.good {
     background-color: silver;
+    color: rgb(48, 48, 48);
 }
 
 button.fail {
-    background-color: #CD7F32;
+    background-color: hsl(30, 61%, 50%);
+    color: hsl(30, 61%, 12.5%);
 }
 
 button.veto {
-    background-color: red;
+    background-color: hsl(0, 100%, 50%);
+    color: hsl(0, 100%, 12.5%);
 }
 
 button.veto:disabled {
