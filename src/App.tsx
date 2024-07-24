@@ -46,8 +46,8 @@ const App: React.FC = () => {
             <Routes>
                 <Route path="/" element={
                     <div className="App">
-                        <h1>C Words</h1>
-                        <WordList userId={userId} />
+                        <h1>Results</h1>
+                        <Results />
                     </div>
                 } />
                 <Route path="/results" element={
